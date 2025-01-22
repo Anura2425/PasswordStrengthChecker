@@ -6,10 +6,6 @@ def get_password():
     password = input()
     return password
 
-def password_to_bits(password):
-    encoded_password = password.encode('utf-8') # Encode password to bytes
-    return len(encoded_password) * 8 # Multiply by 8 to get number of bits, then return
-
 def calculate_entropy(password):
     char_set_size = 0
 
@@ -33,23 +29,33 @@ def calculate_entropy(password):
 
 def password_strength(entropy):
     if entropy <= 35:
+        print("_____________________________________________")
+        print("                                             ")
         print("Your password is Very Weak!!! Change it! 😾")
+        print("_____________________________________________")
     elif entropy <= 59:
+        print("______________________________________________")
+        print("                                              ")
         print("Your password is Weak. Could be better... 😿")
+        print("______________________________________________")
     elif entropy <= 119:
+        print("____________________________________________")
+        print("                                            ")
         print("Your password is Strong. Heh... Not bad 😼")
+        print("____________________________________________")
     else:
+        print("_________________________________________________")
+        print("                                                 ")
         print("Your password is Very Stong!!! Holy Moly! 🙀😻")
+        print("_________________________________________________")
 
 
 def main():
     password = get_password()
 
-    bits = password_to_bits(password)
-    print(bits)
-
     entropy = calculate_entropy(password)
+    print("Entropy of your password: ")
     print(entropy)
-
+    
     password_strength(entropy)
 main()
