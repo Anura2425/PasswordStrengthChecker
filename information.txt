@@ -1,0 +1,29 @@
+"""
+Info
+____________________________
+Character set:
+
+Lowercase: 26
+Uppercase: 26
+Numbers: 10
+Special Characters: 32
+
+____________________________
+
+Entropy Calculation:
+
+Entropy = Length of Password * log2(Character Set Size)
+
+(log2 represents the base-2 algo) --> measures bits of entropy
+
+____________________________
+
+Entropy Interpretation
+
+0 - 35 bits: Very weak
+36 - 59 bits: Okay
+60 - 119 bits: Strong
+120+ bits: Very Strong
+
+
+"""
