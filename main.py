@@ -52,10 +52,10 @@ def password_strength(entropy):
 
 def main():
     password = get_password()
-
+    print("")
     entropy = calculate_entropy(password)
     print("Entropy of your password: ")
     print(entropy)
-    
+    print("")
     password_strength(entropy)
 main()
