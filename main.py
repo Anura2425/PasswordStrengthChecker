@@ -1,4 +1,9 @@
 # PasswordStrengthChecker
+#TODO: 
+# - Add time to crack password estimation 
+# - Add list of common patterns that weaken password, then subtrack from strength score if pattern is found in Pword
+#
+
 import math
 
 def get_password():
